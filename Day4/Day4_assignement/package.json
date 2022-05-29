@@ -1,7 +1,7 @@
 {
-  "name": "app33",
+  "name": "day4_assignement",
   "version": "1.0.0",
-  "description": "day 3 assignement",
+  "description": "day 4 assignement",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
