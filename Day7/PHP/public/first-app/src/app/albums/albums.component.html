@@ -1,0 +1,8 @@
+<p>Our list of albums is:</p>
+<ul>
+    <li *ngFor="let album of albums">
+           <a routerLink="/{{album._id}}">{{album.title}}</a> 
+    </li>
+</ul>
+
+<!-- <star-rating> [rating]= game.rate</star-rating> -->
