@@ -1,0 +1,23 @@
+
+
+<div id="container">
+    <form *ngIf="!isLoggedIn" #loginForm="ngForm" (ngSubmit)="login()">
+        <div>
+
+            <label>
+                <input name="username" type="text" placeholder="Username" ngModel />
+            </label>
+        </div>
+        <div>
+            <label>
+                <input name="password" type="password" placeholder="Password" ngModel />
+            </label>
+        </div>
+        <input type="submit" value="Login">
+
+       
+    </form>
+    <span *ngIf="isLoggedIn ">
+        Welcome {{name}} <button (click)="logout()">Logout</button>
+    </span>
+</div>

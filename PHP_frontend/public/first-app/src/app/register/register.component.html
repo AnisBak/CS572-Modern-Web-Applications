@@ -1,0 +1,26 @@
+<div id="container" *ngIf="!isLoggedIn ">
+    <div  *ngIf="haveSuccess" class="result alert alert-success">
+        <p>{{successMessage}}</p>
+    </div>
+    <div  *ngIf="haveError" class=" result alert alert-danger">
+        <p>{{errorMessage}}</p>
+    </div>
+
+    <form  [formGroup]="registrationForm" (ngSubmit)="register()">
+        <div>
+            <input formControlName="name" type="text" placeholder="Name" required>
+        </div>
+        <div>
+            <input type="text" formControlName="username" placeholder="Username" required>
+        </div>
+        <div>
+            <input type="password" formControlName="password" placeholder="Password" required>
+        </div>
+        <div>
+            <input type="password" formControlName="repassword" placeholder="Retype Password" required>
+        </div>
+
+        <input type="submit" value="Register">
+        
+    </form>
+</div>

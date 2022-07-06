@@ -1,0 +1,25 @@
+<p>Our list of albums is:</p>
+<ul>
+    <li *ngFor="let album of albums">
+        <a routerLink="/{{album._id}}">{{album.title}}</a>
+    </li>
+</ul>
+<div *ngIf="isLoggedIn">
+    <form action="" [formGroup]="addForm" (ngSubmit)="add(addForm)">
+        <div>
+            <input formControlName="title" type="text" placeholder="title">
+        </div>
+        <div>
+            <input type="text" formControlName="year" placeholder="year">
+        </div>
+        <div>
+            <input type="text" formControlName="artist" placeholder="artist">
+        </div>
+
+        <input id="add" type="submit" value="Add Album">
+
+
+    </form>
+    <button (click)="onEditDelete()">Edit </button>&#160;
+    <button (click)="onDelete()">Delete </button>
+</div>

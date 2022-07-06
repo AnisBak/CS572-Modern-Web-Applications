@@ -1,0 +1,6 @@
+<form action=""  [formGroup]="deleteForm" (ngSubmit)="delete(deleteForm)">
+    <div>
+        id: <input formControlName="id" type="text" placeholder="id">
+    </div>
+    <input type="submit" value="Delete">
+</form>

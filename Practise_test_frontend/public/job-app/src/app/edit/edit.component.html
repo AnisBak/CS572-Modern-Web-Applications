@@ -1,0 +1,23 @@
+
+<form action=""  [formGroup]="editForm" (ngSubmit)="fullUpdate(editForm)">
+    <div>
+        title: <input formControlName="title" type="text" placeholder="title">
+    </div>
+    <div>
+        salary: <input type="text" formControlName="salary" placeholder="salary">
+    </div>
+    <div>
+        description: <input type="text" formControlName="description" placeholder="description">
+    </div>
+    <div>
+        address: <input type="text" formControlName="address" placeholder="address">
+    </div>
+    <div>
+        skill: <input type="text" formControlName="skills" placeholder="skills">
+    </div>
+    <div>
+        experience: <input type="text" formControlName="experience" placeholder="experience">
+    </div>
+    
+    <input type="submit" value="Update">
+</form>

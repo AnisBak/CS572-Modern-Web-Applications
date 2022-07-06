@@ -1,0 +1,16 @@
+<form action=""  [formGroup]="editForm" (ngSubmit)="fullUpdate(editForm)">
+    <div>
+        <input formControlName="id" type="text" placeholder="id">
+    </div>
+    <div>
+         <input formControlName="title" type="text" placeholder="title">
+    </div>
+    <div>
+         <input type="text" formControlName="year" placeholder="year">
+    </div>
+    <div>
+         <input type="text" formControlName="artist" placeholder="artist">
+    </div>
+    
+    <input id="edit" type="submit" value="Update">
+</form>

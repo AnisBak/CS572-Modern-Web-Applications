@@ -1,0 +1,50 @@
+<H1>{{album.title}} </H1>
+<br />
+Year: {{album.year}}<br />
+Artist: {{album.artist | uppercase }}<br />
+Songs
+<ul>
+    <li *ngFor="let song of album.songs">
+        {{song.title}} : {{song.length}}
+    </li>
+</ul>
+&#160;
+<div *ngIf="isLoggedIn">
+    <div *ngIf="isLoggedIn">
+
+        <form action="" [formGroup]="addSongForm" (ngSubmit)="add(addSongForm)">
+            <div>
+                <input formControlName="title" type="text" placeholder="title">
+            </div>
+
+            <div>
+                <input type="text" formControlName="length" placeholder="length in Seconds">
+            </div>
+
+            <input id="add" type="submit" value="Add Song">
+        </form>
+
+    </div>
+
+    <form action="" [formGroup]="editSongForm" (ngSubmit)="edit(editSongForm)">
+        <div>
+            <input formControlName="id" type="text" placeholder="id">
+        </div>
+        <div>
+            <input formControlName="title" type="text" placeholder="title">
+        </div>
+        <div>
+            <input type="text" formControlName="length" placeholder="length in seconds">
+        </div>
+
+
+        <input id="edit" type="submit" value="Update">
+    </form>
+    <form action="" [formGroup]="deleteSongForm" (ngSubmit)="delete(deleteSongForm)">
+        <div>
+            <input formControlName="id" type="text" placeholder="Song ID">
+        </div>
+        <input id="delete" type="submit" value="Delete">
+    </form>
+
+</div>

@@ -1,0 +1,14 @@
+
+<form action=""  [formGroup]="addForm" (ngSubmit)="add(addForm)">
+    <div>
+        <input formControlName="title" type="text" placeholder="title">
+    </div>
+    <div>
+         <input type="text" formControlName="year" placeholder="year">
+    </div>
+    <div>
+         <input type="text" formControlName="artist" placeholder="artist">
+    </div>
+    
+    <input id="add" type="submit" value="add">
+</form>

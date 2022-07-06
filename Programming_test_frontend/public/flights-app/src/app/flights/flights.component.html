@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let flight of flights">
+        <a routerLink="/flights/{{flight._id}}">
+            
+            {{flight.src_airport}}
+            {{flight.dst_airport}}
+           
+        </a>
+    </li>
+</ul>

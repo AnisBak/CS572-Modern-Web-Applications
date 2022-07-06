@@ -1,0 +1,10 @@
+<h1>
+    Search for a job using a skill
+</h1>
+<form [formGroup]="skillForm">
+    <input type="text"  formControlName="skill">
+</form>
+<button type="button" (click)="search()">Search (click twice)</button>
+<br>
+
+{{this.job.title}}
